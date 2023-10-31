@@ -1,0 +1,30 @@
++------------------+       +-------------------+     +------------------+
+|     Étudiant     |<>-----|       Classe      |<>---|   Enseignant     |
++------------------+       +-------------------+     +------------------+
+| - nom            |       | - nomClasse       |     | - nom            |
+| - prénom         |       | - niveau          |     | - prénom         |
+| - dateNaissance  |       +-------------------+     | - matière        |
+| - adresse        |       | + ajouterÉtudiant()|     | - adresse        |
+| - infoParent(s)  |       | + retirerÉtudiant()|     +------------------+
++------------------+       | + listerÉtudiants()|     | + marquerAbsence()|
+                           +--------^-----------+     | + consulterClasse()|
+                                    |                 +---------^---------+
+                                    |                           |
++------------------+       +--------+-----------+               |
+|      Parent      |       |      Absence       |<--------------+
++------------------+       +--------------------+
+| - nom            |       | - date             |
+| - prénom         |       | - raison           |
+| - téléphone      |       | - confirmée        |
+| - email          |       +--------------------+
+| - adresse        |       | + confirmerAbsence()|
++------------------+       | + informerParent()  |
+                           +--------------------+
+Explications :
+
+Un Étudiant a des attributs de base comme nom, prénom, dateNaissance, adresse, et les informations sur son/ses Parent(s). Il est associé à une Classe et peut avoir plusieurs Absence.
+Une Classe contient une liste d'Étudiants, le nomClasse et le niveau (par exemple, maternelle 1, 2, etc.). Elle peut avoir des opérations pour ajouter ou retirer des étudiants, ou lister tous les étudiants présents.
+Un Enseignant est responsable de une ou plusieurs Classes, et il peut marquerAbsence pour un Étudiant et consulterClasse pour voir les détails.
+Un Parent est associé à un ou plusieurs Étudiants et contient des informations pour le contacter (téléphone, email).
+Une Absence a une date, une raison, et un statut confirmée (pour savoir si elle a été vérifiée ou non). Elle peut avoir des méthodes pour confirmer l'absence et pour informer le parent concerné.
+Ce diagramme est assez simplifié et sert de point de départ. Dans une application réelle, vous devriez également considérer des aspects tels que l'authentification des utilisateurs, la persistance des données, la gestion des erreurs, et d'autres fonctionnalités spécifiques aux besoins de l'école.
