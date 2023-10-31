@@ -19,11 +19,8 @@ La finalité principale de cet atelier est de familiariser les participants avec
 
 La première étape consiste à élaborer un diagramme de classes représentant la structure de l'application. Ce diagramme comprend des entités telles que "Étudiant", "Absence", "Classe", “Enseignant”., et illustre leurs relations.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/574a19cf-96ba-463a-9d7c-55b7276b6679/45b10148-e356-4ece-8178-d71dc3018151/Untitled.png)
-
 ****Étape 2 : Création des entités JPA****
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/574a19cf-96ba-463a-9d7c-55b7276b6679/ae110773-02e2-4ef4-bf5e-cbef8026ec15/Untitled.png)
 
 1. **Enseignant** :
     - **`id`** : Un identifiant unique pour chaque enseignant (de type Long).
@@ -47,13 +44,11 @@ La première étape consiste à élaborer un diagramme de classes représentant 
 
 Des interfaces Repository sont créées pour chaque entité. Ces interfaces étendent les interfaces JPA comme JpaRepository pour fournir des méthodes de CRUD (Create, Read, Update, Delete) sans avoir besoin de les implémenter manuellement.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/574a19cf-96ba-463a-9d7c-55b7276b6679/eaf0074d-143c-4597-aa76-93e7e22d0800/Untitled.png)
 
 ****Étape 4 : Élaboration de la couche Service****
 
 Cette couche sert de pont entre la couche contrôleur et la couche Repository. Pour chaque entité, une interface Service est créée avec les méthodes nécessaires. Une classe d'implémentation correspondante est ensuite créée pour chaque interface. L'injection de dépendances est réalisée à l'aide de l'annotation **`@Autowired`** pour injecter les références des Repository dans les classes Service.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/574a19cf-96ba-463a-9d7c-55b7276b6679/e2e4ca77-43e5-4900-b95f-d7ecf9b2ded1/Untitled.png)
 
 ****Étape 5 : Conception de la couche Contrôleur****
 
@@ -65,6 +60,4 @@ Avec Thymeleaf, des vues HTML sont créées pour :
 
 - **CRUD Étudiants** : Permet d'afficher la liste des étudiants, d'ajouter un nouvel étudiant, de modifier ou de supprimer un étudiant existant.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/574a19cf-96ba-463a-9d7c-55b7276b6679/71b76c3a-579c-473f-91ef-efe2ef9e39a6/Untitled.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/574a19cf-96ba-463a-9d7c-55b7276b6679/5ac273c7-f135-4ad1-9bad-e583c42f32d3/Untitled.png)
